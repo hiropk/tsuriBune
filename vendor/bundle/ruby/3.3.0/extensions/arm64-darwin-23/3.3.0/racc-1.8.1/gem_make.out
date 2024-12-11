@@ -1,0 +1,18 @@
+current directory: /Users/hiroyuki/tsuriBune/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/hiroyuki/.rbenv/versions/3.3.6/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/hiroyuki/tsuriBune/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20241211-84997-qtg96x sitelibdir\=./.gem.20241211-84997-qtg96x clean
+
+current directory: /Users/hiroyuki/tsuriBune/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20241211-84997-qtg96x sitelibdir\=./.gem.20241211-84997-qtg96x
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/hiroyuki/tsuriBune/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20241211-84997-qtg96x sitelibdir\=./.gem.20241211-84997-qtg96x install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20241211-84997-qtg96x/racc
+
+current directory: /Users/hiroyuki/tsuriBune/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20241211-84997-qtg96x sitelibdir\=./.gem.20241211-84997-qtg96x clean
