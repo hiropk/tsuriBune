@@ -1,4 +1,4 @@
 class ShipCaptainController < ApplicationController
-  def dashboard
+  def home
   end
 end

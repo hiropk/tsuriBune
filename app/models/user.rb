@@ -4,5 +4,5 @@ class User < ApplicationRecord
 
   normalizes :email_address, with: ->(e) { e.strip.downcase }
   # admin@example.com
-  # password
+  # P@ssword1234
 end
