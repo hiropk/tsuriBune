@@ -1,0 +1,2 @@
+module ShipCaptainHelper
+end
