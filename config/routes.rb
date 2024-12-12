@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "ship_captain#home"
-  get "micropots/create"
-  get "micropots/destroy"
+  post "micropots/create"
+  post "micropots/destroy"
   resource :session, only: [ :new, :create, :destroy ]
   resources :passwords, param: :token
   get "ship_captain/home"

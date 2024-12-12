@@ -6,7 +6,7 @@ class MicropotsController < ApplicationController
       redirect_to root_url
     else
       flash[:danger] = @micropost.errors.full_messages.join(" / ")
-      render @current_user, status: :unprocessable_entity
+      redirect_to root_url
     end
   end
 
@@ -23,6 +23,6 @@ class MicropotsController < ApplicationController
 
   private
   def micropost_params
-    params.require(:micropost).permit(:content, :type)
+    params.require(:micropost).permit(:content)
   end
 end

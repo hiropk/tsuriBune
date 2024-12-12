@@ -1,6 +1,8 @@
 FactoryBot.define do
   factory :micropost do
-    content { "MyText" }
+    sequence :content do |n|
+      "micropost#{n}"
+    end
     user { nil }
   end
 end
