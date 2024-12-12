@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resource :session, only: [:new, :create, :destroy]
+  root "ship_captain#home"
+  get "micropots/create"
+  get "micropots/destroy"
+  resource :session, only: [ :new, :create, :destroy ]
   resources :passwords, param: :token
   get "ship_captain/home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

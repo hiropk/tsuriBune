@@ -12,6 +12,7 @@ ja:
         complete: "更新しました"
       destory:
         confirm: "削除しますか？"
+        complete: "削除しました"
     button:
       create: "新規作成"
       search: "検索"
@@ -24,6 +25,7 @@ ja:
   ship_captain: 
     title: '船長管理画面'
     button:
+      micropots: "投稿一覧"
       static_page_edit: "ページ編集"
       menu_edit: "メニュー編集"
       fishing_service_info_edit: "遊漁船情報編集"

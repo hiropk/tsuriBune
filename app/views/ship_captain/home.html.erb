@@ -4,13 +4,21 @@
   </h1>
 </div>
 
-<%= link_to t('ship_captain.button.static_page_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
-<%= link_to t('ship_captain.button.menu_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
-<%= link_to t('ship_captain.button.fishing_service_info_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
-<%= link_to t('ship_captain.button.schedule_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
-<%= link_to t('ship_captain.button.link_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
-<%= link_to t('ship_captain.button.safety_info_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+<div>
+  <%= link_to t('ship_captain.button.micropots'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+  <%= link_to t('ship_captain.button.static_page_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+  <%= link_to t('ship_captain.button.menu_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+  <%= link_to t('ship_captain.button.fishing_service_info_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+  <%= link_to t('ship_captain.button.schedule_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+  <%= link_to t('ship_captain.button.link_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+  <%= link_to t('ship_captain.button.safety_info_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+</div>
 
+<div id="main-contents">
+  <ol>
+    <%= render partial: "microposts/micropost", collection: @microposts %>
+  </ol>
+</div>
 
 <% if authenticated? %>
   <p><%= Current.user.email_address %></p>
@@ -18,4 +26,3 @@
 <% else %>
   <%= link_to t('dictionary.login'), new_session_path %>
 <% end %>
-
