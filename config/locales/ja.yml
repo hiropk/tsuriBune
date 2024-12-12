@@ -25,11 +25,11 @@ ja:
     title: '船長管理画面'
     button:
       static_page_edit: "ページ編集"
-      static_page_edit: "メニュー編集"
-      static_page_edit: "遊漁船情報編集"
-      static_page_edit: "スケジュール編集"
-      static_page_edit: "リンク編集"
-      static_page_edit: "安全情報編集"
+      menu_edit: "メニュー編集"
+      fishing_service_info_edit: "遊漁船情報編集"
+      schedule_edit: "スケジュール編集"
+      link_edit: "リンク編集"
+      safety_info_edit: "安全情報編集"
 
 
 

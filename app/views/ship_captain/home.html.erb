@@ -4,6 +4,14 @@
   </h1>
 </div>
 
+<%= link_to t('ship_captain.button.static_page_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+<%= link_to t('ship_captain.button.menu_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+<%= link_to t('ship_captain.button.fishing_service_info_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+<%= link_to t('ship_captain.button.schedule_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+<%= link_to t('ship_captain.button.link_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+<%= link_to t('ship_captain.button.safety_info_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
+
+
 <% if authenticated? %>
   <p><%= Current.user.email_address %></p>
   <%= link_to t('dictionary.logout'), session_path, data: { "turbo-method": :delete} %>
