@@ -32,6 +32,20 @@ ja:
       schedule_edit: "スケジュール編集"
       link_edit: "リンク編集"
       safety_info_edit: "安全情報編集"
+    home:
+      title: "ホーム"
+    page_edit:
+      title: "ページ編集"
+    menu_edit:
+      title: "メニュー編集"
+    fishing_service_info_edit:
+      title: "遊漁船情報編集"
+    schedule_edit:
+      title: "スケジュール編集"
+    link_edit:
+      title: "リンク編集"
+    safety_info_edit:
+      title: "安全情報編集"
 
 
 

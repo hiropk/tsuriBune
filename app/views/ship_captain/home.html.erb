@@ -4,21 +4,16 @@
   </h1>
 </div>
 
-<div>
-  <%= link_to t('ship_captain.button.micropots'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
-  <%= link_to t('ship_captain.button.static_page_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
-  <%= link_to t('ship_captain.button.menu_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
-  <%= link_to t('ship_captain.button.fishing_service_info_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
-  <%= link_to t('ship_captain.button.schedule_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
-  <%= link_to t('ship_captain.button.link_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
-  <%= link_to t('ship_captain.button.safety_info_edit'), '#', class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
-</div>
+<%= turbo_frame_tag "main-contents" do %>
+  <%= render 'buttons' %>
 
-<div id="main-contents">
-  <ol>
-    <%= render partial: "microposts/micropost", collection: @microposts %>
-  </ol>
-</div>
+  <div>
+    <h1><%=t('ship_captain.home.title')%></h1>
+    <ol>
+      <%= render partial: "microposts/micropost", collection: @microposts %>
+    </ol>
+  </div>
+<% end %>
 
 <% if authenticated? %>
   <p><%= Current.user.email_address %></p>
