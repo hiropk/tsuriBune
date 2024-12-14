@@ -4,6 +4,7 @@ class ShipCaptainController < ApplicationController
   end
 
   def page_edit
+    @page_contents = PageContent.all
   end
 
   def menu_edit

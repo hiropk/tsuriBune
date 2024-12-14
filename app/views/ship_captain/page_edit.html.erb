@@ -2,6 +2,24 @@
   <%= render 'buttons' %>
 
   <div>
-    <h1><%=t('ship_captain.page_edit.title')%></h1>
+    <h1 class="font-bold text-3xl"><%=t('ship_captain.page_edit.title')%></h1>
+
+    <div>
+      <% PageContent.all.pluck(:display_page).uniq.each do |display_page| %>
+        <h1 class="font-bold text-2xl"><%= display_page %></h1>
+          <% @page_contents.filter { |pc| pc.display_page == display_page }.sort.each do |page_content| %>
+            <%= form_with url: page_contents_update_path do |f| %>
+
+              <%= f.hidden_field :page_content_id, value: page_content.id %>
+
+              <div><%= f.label :contents, page_content.head  %></div>
+
+              <div><%= f.text_area :contents, value: page_content.contents.join(','), size: "120x5" %></div>
+
+            <%= f.submit t('dictionary.button.update'),  class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 <% end %>
