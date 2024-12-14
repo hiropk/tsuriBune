@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
   root "ship_captain#home"
+  get "ship_captain/home"
+  get "ship_captain/page_edit"
+  get "ship_captain/menu_edit"
+  get "ship_captain/fishing_service_info_edit"
+  get "ship_captain/schedule_edit"
+  get "ship_captain/link_edit"
+  get "ship_captain/safety_info_edit"
+
   post "micropots/create"
   post "micropots/destroy"
   resource :session, only: [ :new, :create, :destroy ]
   resources :passwords, param: :token
-  get "ship_captain/home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
