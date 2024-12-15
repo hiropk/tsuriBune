@@ -12,7 +12,7 @@ class PageContent < ApplicationRecord
 
     invalid_indexs = []
     contents.each_with_index do |content, i|
-      invalid_indexs << i+1 if content.length > 10
+      invalid_indexs << i+1 if content.length > 100
     end
 
     if invalid_indexs.length > 0
