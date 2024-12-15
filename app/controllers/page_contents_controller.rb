@@ -6,7 +6,7 @@ class PageContentsController < ApplicationController
     else
       flash[page_contents_params[:head] + "失敗"] = @page_content.errors.full_messages.join(" / ")
     end
-    redirect_to ship_captain_page_edit_path
+    redirect_to ship_captain_page_edit_path(draft_contents: page_contents_params)
   end
 
   private
