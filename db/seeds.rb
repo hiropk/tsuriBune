@@ -4,6 +4,15 @@
 #
 # Example:
 #
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+
+[ "あいさつ", "予約", "お知らせ", "注意" ].each do |head|
+  PageContent.find_or_create_by!(display_page: "home", head: head, contents: [])
+end
+
+[ "船の紹介", "船長の紹介" ].each do |head|
+  PageContent.find_or_create_by!(display_page: "ship", head: head, contents: [])
+end
+
+[ "表の見方", "予約" ].each do |head|
+  PageContent.find_or_create_by!(display_page: "schedule", head: head, contents: [])
+end

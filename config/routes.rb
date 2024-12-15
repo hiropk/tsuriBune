@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post "page_contents/update"
   root "ship_captain#home"
   get "ship_captain/home"
   get "ship_captain/page_edit"

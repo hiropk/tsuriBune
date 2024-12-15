@@ -4,6 +4,14 @@ class ShipCaptainController < ApplicationController
   end
 
   def page_edit
+    @draft_contents = {}
+    if params[:draft_contents]
+      head = params[:draft_contents][:head]
+      contents = params[:draft_contents][:contents]
+      @draft_contents = { head => contents }.with_indifferent_access
+    end
+
+    @page_contents = PageContent.all
   end
 
   def menu_edit

@@ -8,3 +8,21 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+/* flash_message */
+.flash-message {
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 16px 24px;
+  margin: 16px 0px;
+}
+
+.flash-message.notice,
+.flash-message.success {
+  color: #1f8dee;
+}
+
+.flash-message.alert,
+.flash-message.failure {
+  color: #dd0808;
+}
