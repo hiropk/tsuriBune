@@ -5,6 +5,7 @@ ja:
       update: "更新"
       destory:
         confirm: "削除確認"
+      display_now: "現在の表示"
     message:
       create:
         complete: "登録しました"
