@@ -12,6 +12,7 @@ class ShipCaptainController < ApplicationController
     end
 
     @page_contents = PageContent.all
+    @display_pages = @page_contents.pluck(:display_page).uniq
   end
 
   def menu_edit
