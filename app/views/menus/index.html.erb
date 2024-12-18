@@ -1,0 +1,27 @@
+<%= turbo_frame_tag "main-contents" do %>
+  <%= render 'ship_captain/buttons' %>
+
+  <div class="w-full">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <div>
+      <h1 class="font-bold text-4xl">
+        <%= t('ship_captain.menu_edit.title')%>
+      </h1>
+    </div>
+
+    <div class="flex items-center">
+      <h1 class="font-bold text-2xl">メニューリスト</h1>
+      <div><%= link_to "新規作成", new_menu_path, class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" %></div>
+    </div>
+
+    <div id="menus" class="min-w-full">
+      <% @menus.each do |menu| %>
+        <%= render menu %>
+        <%= link_to "詳細", menu, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

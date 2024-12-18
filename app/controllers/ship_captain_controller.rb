@@ -15,9 +15,6 @@ class ShipCaptainController < ApplicationController
     @display_pages = @page_contents.pluck(:display_page).uniq
   end
 
-  def menu_edit
-  end
-
   def fishing_service_info_edit
   end
 
