@@ -12,27 +12,27 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :name %>
+    <%= form.label :name, "メニュー名" %>
     <%= form.text_field :name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :embarkation_type %>
+    <%= form.label :embarkation_type, "出船形式" %>
     <%= form.number_field :embarkation_type, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :unit_price %>
+    <%= form.label :unit_price, "単価" %>
     <%= form.number_field :unit_price, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :acceptable_num %>
+    <%= form.label :acceptable_num, "乗船可能人数" %>
     <%= form.number_field :acceptable_num, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :payment_method %>
+    <%= form.label :payment_method, "支払い方法" %>
     <%= form.number_field :payment_method, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
