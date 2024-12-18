@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   root "ship_captain#home"
   get "ship_captain/home"
   get "ship_captain/page_edit"
-  get "ship_captain/menu_edit"
   get "ship_captain/fishing_service_info_edit"
   get "ship_captain/schedule_edit"
   get "ship_captain/link_edit"
