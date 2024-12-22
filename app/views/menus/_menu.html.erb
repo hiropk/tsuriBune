@@ -1,27 +1,20 @@
-<div id="<%= dom_id menu %>">
-  <p class="my-5 flex">
-    <strong class="block font-medium mb-1">メニュー名:</strong>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
     <%= menu.name %>
-  </p>
-
-  <p class="my-5 flex">
-    <strong class="block font-medium mb-1">出船形式:</strong>
+  </th>
+  <td class="px-6 py-4">
     <%= menu.embarkation_type %>
-  </p>
-
-  <p class="my-5 flex">
-    <strong class="block font-medium mb-1">単価:</strong>
+  </td>
+  <td class="px-6 py-4">
     <%= menu.unit_price %>
-  </p>
-
-  <p class="my-5 flex">
-    <strong class="block font-medium mb-1">乗船可能人数:</strong>
+  </td>
+  <td class="px-6 py-4">
     <%= menu.acceptable_num %>
-  </p>
-
-  <p class="my-5 flex">
-    <strong class="block font-medium mb-1">支払い方法:</strong>
+  </td>
+  <td class="px-6 py-4">
     <%= menu.payment_method %>
-  </p>
-
-</div>
+  </td>
+  <td class="px-6 py-4">
+    <%= link_to "詳細", menu, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </td>
+</tr>
