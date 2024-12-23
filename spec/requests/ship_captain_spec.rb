@@ -19,7 +19,7 @@ RSpec.describe "ShipCaptains", type: :request do
       end
 
       it "メニュー画面が表示されること" do
-        get "/ship_captain/menu_edit"
+        get "/menus"
         expect(response).to have_http_status(200)
       end
 
