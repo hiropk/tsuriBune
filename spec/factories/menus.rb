@@ -1,6 +1,8 @@
 FactoryBot.define do
   factory :menu do
-    name { "MyString" }
+    sequence :name do |n|
+      "menu#{n}"
+    end
     embarkation_type { 1 }
     unit_price { 1 }
     acceptable_num { 1 }
