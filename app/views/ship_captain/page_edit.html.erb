@@ -1,5 +1,3 @@
-<%= turbo_frame_tag "main-contents" do %>
-  <%= render 'ship_captain_head' %>
-  <h1 class="font-bold text-3xl"><%=t('ship_captain.page_edit.title')%></h1>
-  <%= render partial: 'form/page_contents_form', locals: { display_pages: @display_pages } %>
-<% end %>
+<%= render 'ship_captain_head' %>
+<h1 class="font-bold text-3xl"><%=t('ship_captain.page_edit.title')%></h1>
+<%= render partial: 'form/page_contents_form', locals: { display_pages: @display_pages } %>
