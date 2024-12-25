@@ -15,6 +15,10 @@
     <%= t("menu.enum.payment_method.#{menu.payment_method}") %>
   </td>
   <td class="px-6 py-4">
-    <%= link_to "編集", edit_menu_path(menu), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <div class="flex">
+      <%= link_to "詳細", menu_path(menu), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <%= link_to "編集", edit_menu_path(menu), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <%= button_to "削除", menu, method: :delete, data: { turbo_confirm: "本当に削除しますか？" }, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    </div>
   </td>
 </tr>
