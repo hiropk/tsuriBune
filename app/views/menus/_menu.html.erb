@@ -3,7 +3,7 @@
     <%= menu.name %>
   </th>
   <td class="px-6 py-4">
-    <%= menu.embarkation_type %>
+    <%= t("menu.enum.embarkation_type.#{menu.embarkation_type}") %>
   </td>
   <td class="px-6 py-4">
     <%= menu.unit_price %>
@@ -12,7 +12,8 @@
     <%= menu.acceptable_num %>
   </td>
   <td class="px-6 py-4">
-    <%= menu.payment_method %>
+    <%= t("menu.enum.payment_method.#{menu.payment_method}") %>
+  </td>
   </td>
   <td class="px-6 py-4">
     <%= link_to "詳細", menu, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>

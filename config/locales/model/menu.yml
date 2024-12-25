@@ -1,0 +1,9 @@
+ja:
+  menu:
+    enum:
+      embarkation_type:
+        ride_share: "乗合"
+        charter: "チャーター"
+      payment_method:
+        cash_only: "現金"
+        cashless: "キャッシュレス"

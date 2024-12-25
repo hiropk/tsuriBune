@@ -1,3 +1,14 @@
+<h1 class="font-bold text-4xl">
+  <%= t('ship_captain.title')%>
+</h1>
+
+<% if authenticated? %>
+  <p><%= Current.user.email_address %></p>
+  <%= link_to t('dictionary.logout'), session_path, data: { "turbo-method": :delete} %>
+<% else %>
+  <%= link_to t('dictionary.login'), new_session_path %>
+<% end %>
+
 <div>
   <%= link_to t('ship_captain.button.micropots'), ship_captain_home_path, class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
   <%= link_to t('ship_captain.button.static_page_edit'), ship_captain_page_edit_path, class: "px-7 py-1 bg-blue-400 text-white font-semibold rounded hover:bg-blue-500" %>
