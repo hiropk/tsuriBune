@@ -32,13 +32,13 @@
                 支払い方法
             </th>
             <th scope="col" class="px-6 py-3">
-                詳細
+                編集
             </th>
           </tr>
         </thead>
         <tbody>
           <% @menus.each do |menu| %>
-            <%= render menu %>
+            <%= render partial: 'menu_table', locals: {menu: menu} %>
           <% end %>
         </tbody>
       </table>
