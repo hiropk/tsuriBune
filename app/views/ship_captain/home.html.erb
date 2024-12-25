@@ -2,7 +2,16 @@
 
 <div>
   <h1 class="font-bold text-4xl"><%=t('ship_captain.home.title')%></h1>
-  <ol>
-    <%= render partial: "microposts/micropost", collection: @microposts %>
-  </ol>
+
+  <div class="flex">
+    <div class="left-column">
+      <%= render "microposts/micropost_form" %>
+    </div>
+    <div class="right-column">
+      <ol>
+        <h1 class="font-bold text-2xl">投稿一覧</h1>
+        <%= render partial: "microposts/micropost", collection: @microposts %>
+      </ol>
+    </div>
+  </div>
 </div>

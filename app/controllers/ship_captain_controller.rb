@@ -1,6 +1,7 @@
 class ShipCaptainController < ApplicationController
   before_action :set_microposts, only: [ :home ]
   def home
+    @micropost = Current.session.user.microposts.build
   end
 
   def page_edit

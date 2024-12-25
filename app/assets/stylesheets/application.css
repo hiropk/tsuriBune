@@ -26,3 +26,12 @@
 .flash-message.failure {
   color: #dd0808;
 }
+
+/* micropost */
+.left-column {
+  width: 35%;
+}
+
+.right-column {
+  width: 75%;
+}
