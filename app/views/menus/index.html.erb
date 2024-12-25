@@ -1,5 +1,5 @@
 <%= turbo_frame_tag "main-contents" do %>
-  <%= render 'ship_captain/buttons' %>
+  <%= render 'ship_captain/ship_captain_head' %>
 
   <div class="w-full">
     <% if notice.present? %>
@@ -10,6 +10,7 @@
       <h1 class="font-bold text-4xl">
         <%= t('ship_captain.menu_edit.title')%>
       </h1>
+      <div class="text-right"><%= link_to "+新規作成", new_menu_path, class: "font-bold text-teal-500" %></div>
     </div>
 
     <div class="relative overflow-x-auto">
@@ -32,17 +33,16 @@
                 支払い方法
             </th>
             <th scope="col" class="px-6 py-3">
-                詳細
+                操作
             </th>
           </tr>
         </thead>
         <tbody>
           <% @menus.each do |menu| %>
-            <%= render menu %>
+            <%= render partial: 'menu_table', locals: {menu: menu} %>
           <% end %>
         </tbody>
       </table>
-      <%= link_to "新規作成", new_menu_path, class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" %>
     </div>
   </div>
 <% end %>

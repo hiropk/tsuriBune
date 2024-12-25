@@ -1,20 +1,5 @@
-<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-    <%= menu.name %>
-  </th>
-  <td class="px-6 py-4">
-    <%= menu.embarkation_type %>
-  </td>
-  <td class="px-6 py-4">
-    <%= menu.unit_price %>
-  </td>
-  <td class="px-6 py-4">
-    <%= menu.acceptable_num %>
-  </td>
-  <td class="px-6 py-4">
-    <%= menu.payment_method %>
-  </td>
-  <td class="px-6 py-4">
-    <%= link_to "詳細", menu, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-  </td>
-</tr>
+<div><%= "メニュー名：#{menu.name}" %></div>
+<div><%= "出船形式：#{t("menu.enum.embarkation_type.#{menu.embarkation_type}")}" %></div>
+<div><%= "単価：#{menu.unit_price}" %></div>
+<div><%= "乗船可能人数：#{menu.acceptable_num}" %></div>
+<div><%= "支払い方法：#{t("menu.enum.payment_method.#{menu.payment_method}")}" %></div>

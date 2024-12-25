@@ -1,23 +1,10 @@
-<div>
-  <h1 class="font-bold text-4xl">
-    <%= t('ship_captain.title')%>
-  </h1>
-</div>
-
 <%= turbo_frame_tag "main-contents" do %>
-  <%= render 'buttons' %>
+  <%= render 'ship_captain_head' %>
 
   <div>
-    <h1><%=t('ship_captain.home.title')%></h1>
+    <h1 class="font-bold text-4xl"><%=t('ship_captain.home.title')%></h1>
     <ol>
       <%= render partial: "microposts/micropost", collection: @microposts %>
     </ol>
   </div>
-<% end %>
-
-<% if authenticated? %>
-  <p><%= Current.user.email_address %></p>
-  <%= link_to t('dictionary.logout'), session_path, data: { "turbo-method": :delete} %>
-<% else %>
-  <%= link_to t('dictionary.login'), new_session_path %>
 <% end %>
