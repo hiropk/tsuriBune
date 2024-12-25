@@ -1,0 +1,2 @@
+class FishingServiceInfo < ApplicationRecord
+end
