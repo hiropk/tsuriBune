@@ -1,0 +1,7 @@
+<div><%= "氏名または名称：#{fishing_service_info.name}" %></div>
+<div><%= "登録番号：#{fishing_service_info.pref} #{fishing_service_info.number}" %></div>
+<div><%= "登録の有効期間：#{fishing_service_info.registration_start_date} ~ #{fishing_service_info.registration_end_date}" %></div>
+<div><%= "営業所の所在地：#{fishing_service_info.address}" %></div>
+<div><%= "遊漁船の名称：#{fishing_service_info.ship_name}" %></div>
+<div><%= "遊漁船業務主任者の名前：#{fishing_service_info.administrator.join(', ')}" %></div>
+<div><%= "損害賠償措置の保険期間：#{fishing_service_info.insurance_start_date} ~ #{fishing_service_info.insurance_end_date}" %></div>

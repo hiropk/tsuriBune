@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :fishing_service_infos, only: [ :show, :edit, :update ]
   resources :menus
   post "page_contents/update"
   root "ship_captain#home"
