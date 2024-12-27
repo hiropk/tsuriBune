@@ -9,10 +9,10 @@
       <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">氏名または名称</th><td class="px-6 py-4"><%= "#{fishing_service_info.name}" %></td>
     </tr>
     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">登録番号</th><td class="px-6 py-4"><%= "#{fishing_service_info.pref} #{fishing_service_info.number}" %></td>
+      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">登録番号</th><td class="px-6 py-4"><%= t("fishing_service_info.enum.pref.#{fishing_service_info.pref}") + " #{fishing_service_info.number}" %></td>
     </tr>
     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">登録の有効期間</th><td class="px-6 py-4"><%= "#{fishing_service_info.registration_start_date} ~ #{fishing_service_info.registration_end_date}"%></td>
+      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">登録の有効期間</th><td class="px-6 py-4"><%= l(fishing_service_info.registration_start_date) + " ~ " + l(fishing_service_info.registration_end_date)%></td>
     </tr>
     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
       <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">営業所の所在地</th><td class="px-6 py-4"><%= "#{fishing_service_info.address}" %></td>
@@ -24,7 +24,7 @@
       <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">遊漁船業務主任者の名前</th><td class="px-6 py-4"><%= "#{fishing_service_info.administrator.join(', ')}"%></td>
     </tr>
     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">損害賠償措置の保険期間</th><td class="px-6 py-4"><%= "#{fishing_service_info.insurance_start_date} ~ #{fishing_service_info.insurance_end_date}"%></td>
+      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">損害賠償措置の保険期間</th><td class="px-6 py-4"><%= l(fishing_service_info.insurance_start_date) + " ~ " + l(fishing_service_info.insurance_end_date)%></td>
     </tr>
   </tbody>
 </table>

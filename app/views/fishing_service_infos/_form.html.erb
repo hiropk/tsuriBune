@@ -48,7 +48,7 @@
 
   <div class="my-5">
     <%= form.label :administrator, "遊漁船業務主任者の名前" %>
-    <%= form.text_area :administrator, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-3/5"%>
+    <%= form.text_area :administrator, value: fishing_service_info.administrator.join(','), class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-3/5"%>
   </div>
 
   <div class="my-5">
