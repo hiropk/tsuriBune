@@ -4,6 +4,7 @@ class FishingServiceInfosController < ApplicationController
   end
 
   def edit
+    @fishing_service_info = FishingServiceInfo.first
   end
 
   def update
