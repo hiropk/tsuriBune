@@ -6,7 +6,7 @@
     <%= t("menu.enum.embarkation_type.#{menu.embarkation_type}") %>
   </td>
   <td class="px-6 py-4">
-    <%= menu.unit_price %>
+    <%= menu.unit_price.to_formatted_s(:delimited) %>
   </td>
   <td class="px-6 py-4">
     <%= menu.acceptable_num %>

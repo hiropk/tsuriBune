@@ -13,27 +13,27 @@
 
   <div class="my-5">
     <%= form.label :name, "メニュー名" %>
-    <%= form.text_field :name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/5" %>
   </div>
 
   <div class="my-5">
     <%= form.label :embarkation_type, "出船形式" %>
-    <%= form.select :embarkation_type, select_values(:menu, :embarkation_type, Menu.embarkation_types), {prompt: "選択してください"}, :class => "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.select :embarkation_type, select_values(:menu, :embarkation_type, Menu.embarkation_types), {prompt: "選択してください"}, :class => "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/5" %>
   </div>
 
   <div class="my-5">
     <%= form.label :unit_price, "単価（単位：円）" %>
-    <%= form.number_field :unit_price, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.number_field :unit_price, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/5" %>
   </div>
 
   <div class="my-5">
     <%= form.label :acceptable_num, "乗船可能人数（単位：人）" %>
-    <%= form.number_field :acceptable_num, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.number_field :acceptable_num, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/6" %>
   </div>
 
   <div class="my-5">
     <%= form.label :payment_method, "支払い方法" %>
-    <%= form.select :payment_method, select_values(:menu, :payment_method, Menu.payment_methods), {prompt: "選択してください"}, :class => "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.select :payment_method, select_values(:menu, :payment_method, Menu.payment_methods), {prompt: "選択してください"}, :class => "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/5" %>
   </div>
 
   <div class="inline">
