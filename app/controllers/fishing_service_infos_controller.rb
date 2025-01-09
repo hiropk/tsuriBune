@@ -26,6 +26,6 @@ class FishingServiceInfosController < ApplicationController
       params[:fishing_service_info][:administrator] = administrator_str.split(",")
     end
 
-    params.expect(fishing_service_info: [ :name, :pref, :number, :registration_start_date, :registration_end_date, :address, :ship_name, :administrator ])
+    params.expect(fishing_service_info: [ :name, :pref, :number, :registration_start_date, :registration_end_date, :address, :ship_name, :administrator, :insurance_start_date, :insurance_end_date ])
   end
 end
