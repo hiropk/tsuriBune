@@ -1,4 +1,7 @@
 <%= render 'ship_captain_head' %>
 <div>
   <h1  class="font-bold text-4xl"><%=t('ship_captain.schedule_edit.title')%></h1>
+  <%= month_calendar do |date| %>
+    <%= date.day %>
+  <% end %>
 </div>
