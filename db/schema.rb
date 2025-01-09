@@ -10,9 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_18_124205) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_25_052453) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "fishing_service_infos", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "pref", null: false
+    t.integer "number", null: false
+    t.date "registration_start_date", null: false
+    t.date "registration_end_date", null: false
+    t.string "address", null: false
+    t.string "ship_name", null: false
+    t.text "administrator", null: false
+    t.date "insurance_start_date", null: false
+    t.date "insurance_end_date", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "menus", force: :cascade do |t|
     t.string "name"

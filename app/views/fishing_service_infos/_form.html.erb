@@ -1,0 +1,67 @@
+<%= form_with(model: fishing_service_info, class: "contents") do |form| %>
+  <% if fishing_service_info.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(fishing_service_info.errors.count, "error") %> prohibited this fishing_service_info from being saved:</h2>
+
+      <ul>
+        <% fishing_service_info.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-5">
+    <%= form.label :name, "氏名または名称" %>
+    <%= form.text_field :name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/5" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :pref, "登録県" %>
+    <%= form.select :pref, select_values(:fishing_service_info, :pref, FishingServiceInfo.prefs), {prompt: "---"}, :class => "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/6" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :number, "登録番号" %>
+    <%= form.number_field :number, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/6" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :registration_start_date, "登録の有効期間：開始日" %>
+    <%= form.date_field :registration_start_date, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/6" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :registration_end_date, "登録の有効期間：終了日" %>
+    <%= form.date_field :registration_end_date, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/6" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :address, "営業所の所在地" %>
+    <%= form.text_field :address, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-3/5"%>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :ship_name, "遊漁船の名称" %>
+    <%= form.text_field :ship_name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-2/5"%>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :administrator, "遊漁船業務主任者の名前" %>
+    <%= form.text_area :administrator, value: fishing_service_info.administrator.join(','), class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-3/5"%>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :registration_start_date, "損害賠償措置の保険期間：開始日" %>
+    <%= form.date_field :registration_start_date, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/6" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :registration_end_date, "損害賠償措置の保険期間：終了日" %>
+    <%= form.date_field :registration_end_date, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/6" %>
+  </div>
+
+  <div class="inline">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>

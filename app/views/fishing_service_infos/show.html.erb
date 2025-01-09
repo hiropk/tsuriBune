@@ -1,0 +1,15 @@
+
+
+<%= render 'ship_captain/ship_captain_head' %>
+<div class="mx-auto">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <h1 class="font-bold text-4xl">
+    <%= t('ship_captain.fishing_service_info_edit.title')%>
+  </h1>
+
+  <%= render @fishing_service_info %>
+  <%= link_to "編集", edit_fishing_service_info_path, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+</div>
