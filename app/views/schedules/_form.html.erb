@@ -12,28 +12,23 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :menu_id %>
-    <%= form.collection_select :menu_id, Menu.all, :id, :name, { selected: "no_menu"}, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :menu_id, "メニュー" %>
+    <%= form.collection_select :menu_id, Menu.all, :id, :name, { selected: "no_menu"}, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/5" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :departure_type %>
-    <%= form.number_field :departure_type, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :num_reservation, "予約済人数" %>
+    <%= form.number_field :num_reservation, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/6" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :num_reservation %>
-    <%= form.number_field :num_reservation, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :memo %>
+    <%= form.label :memo, "備考" %>
     <%= form.textarea :memo, rows: 4, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :start_time %>
-    <%= form.datetime_field :start_time, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :start_time, "開始時刻" %>
+    <%= form.datetime_field :start_time, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-1/5" %>
   </div>
 
   <div class="inline">

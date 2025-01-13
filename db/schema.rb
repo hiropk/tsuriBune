@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_09_072627) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_13_073203) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -57,7 +57,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_09_072627) do
 
   create_table "schedules", force: :cascade do |t|
     t.bigint "menu_id", null: false
-    t.integer "departure_type", null: false
     t.integer "num_reservation", default: 0, null: false
     t.text "memo"
     t.datetime "start_time", null: false
