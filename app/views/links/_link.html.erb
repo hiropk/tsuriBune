@@ -1,16 +1,16 @@
 <div id="<%= dom_id link %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
+    <strong class="block font-medium mb-1">リンク名:</strong>
     <%= link.name %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Url:</strong>
-    <%= link.url %>
+    <strong class="block font-medium mb-1">リンク先のアドレス:</strong>
+    <%= link_to link.url,  link.url%>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
+    <strong class="block font-medium mb-1">リンクの説明文:</strong>
     <%= link.description %>
   </p>
 
