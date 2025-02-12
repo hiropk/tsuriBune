@@ -3,10 +3,10 @@
     <%= link.name %>
   </th>
   <td class="px-6 py-4">
-    <%= link.url %>
+    <%= link_to truncate(link.url, length: 50), link.url, class: "font-bold text-blue-400 w-4/5 hover:underline text-blue-500" %>
   </td>
   <td class="px-6 py-4">
-    <%= link.description %>
+    <%= truncate(link.description, length: 100) %>
   </td>
   <td class="px-6 py-4">
     <div class="flex">
