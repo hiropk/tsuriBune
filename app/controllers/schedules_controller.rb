@@ -38,7 +38,7 @@ class SchedulesController < ApplicationController
   def update
     respond_to do |format|
       if @schedule.update(schedule_params)
-        format.html { redirect_to @schedule, notice: t("dictionary.message.update.complete") }
+        format.html { render :index, notice: t("dictionary.message.update.complete") }
         format.json { render :show, status: :ok, location: @schedule }
       else
         format.html { render :edit, status: :unprocessable_entity }

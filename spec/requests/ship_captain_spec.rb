@@ -4,6 +4,7 @@ RSpec.describe "ShipCaptains", type: :request do
   describe "ログイン済の場合" do
     before do
       user = create(:user, :admin, password: "password")
+      create(:fishing_service_info)
       post session_url, params: { email_address: user.email_address, password: 'password' }
     end
 
@@ -29,7 +30,7 @@ RSpec.describe "ShipCaptains", type: :request do
       end
 
       it "スケジュール画面が表示されること" do
-        get "/ship_captain/schedule_edit"
+        get "/schedules"
         expect(response).to have_http_status(200)
       end
 
