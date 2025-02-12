@@ -25,7 +25,7 @@ class SchedulesController < ApplicationController
 
     respond_to do |format|
       if @schedule.save
-        format.html { render :index, notice: "Schedule was successfully created." }
+        format.html { render :index, notice: t("dictionary.message.create.complete") }
         format.json { render :show, status: :created, location: @schedule }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class SchedulesController < ApplicationController
   def update
     respond_to do |format|
       if @schedule.update(schedule_params)
-        format.html { redirect_to @schedule, notice: "Schedule was successfully updated." }
+        format.html { redirect_to @schedule, notice: t("dictionary.message.update.complete") }
         format.json { render :show, status: :ok, location: @schedule }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class SchedulesController < ApplicationController
     @schedule.destroy!
 
     respond_to do |format|
-      format.html { redirect_to schedules_path, status: :see_other, notice: "Schedule was successfully destroyed." }
+      format.html { redirect_to schedules_path, status: :see_other, notice: t("dictionary.message.destory.complete") }
       format.json { head :no_content }
     end
   end
