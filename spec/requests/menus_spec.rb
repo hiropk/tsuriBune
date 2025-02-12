@@ -24,6 +24,7 @@ RSpec.describe "/menus", type: :request do
 
     before do
       user = create(:user, :admin, password: "password")
+      create(:fishing_service_info)
       post session_url, params: { email_address: user.email_address, password: 'password' }
     end
 

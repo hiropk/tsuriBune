@@ -1,6 +1,5 @@
 class MicropotsController < ApplicationController
   def create
-    binding.irb
     @micropost = Current.session.user.microposts.build(micropost_params)
     if @micropost.save
       flash[:success] = t("dictionary.message.create.complete")

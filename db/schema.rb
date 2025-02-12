@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_25_052453) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_13_073203) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -55,6 +55,16 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_25_052453) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "schedules", force: :cascade do |t|
+    t.bigint "menu_id", null: false
+    t.integer "num_reservation", default: 0, null: false
+    t.text "memo"
+    t.datetime "start_time", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["menu_id"], name: "index_schedules_on_menu_id"
+  end
+
   create_table "sessions", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "ip_address"
@@ -74,5 +84,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_25_052453) do
   end
 
   add_foreign_key "microposts", "users"
+  add_foreign_key "schedules", "menus"
   add_foreign_key "sessions", "users"
 end

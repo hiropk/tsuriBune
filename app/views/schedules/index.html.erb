@@ -1,0 +1,23 @@
+<%= render 'ship_captain/ship_captain_head' %>
+
+<turbo-frame id="schedule">
+  <div class="w-full">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <div class="flex justify-between items-center">
+      <h1 class="font-bold text-4xl"><%=t('ship_captain.schedule_edit.title')%></h1>
+    </div>
+
+    <%= link_to "+新規作成", new_schedule_path, class: "font-bold text-teal-500 w-4/5" %>
+    <%= month_calendar do |date| %>
+      <%= date.day %>
+      <% Schedule.on(date).order("start_time").each do |schedule|%>
+        <p>
+          <%= link_to "#{schedule.menu.name}(空:#{schedule.menu.acceptable_num - schedule.num_reservation})", schedule, class: "font-bold text-blue-400 w-4/5 hover:text-blue-500" %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+</turbo-frame>

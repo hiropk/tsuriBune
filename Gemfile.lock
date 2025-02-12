@@ -287,6 +287,8 @@ GEM
       rubocop-rails
     ruby-progressbar (1.13.0)
     securerandom (0.4.0)
+    simple_calendar (3.0.4)
+      rails (>= 6.1)
     solid_cable (3.0.4)
       actioncable (>= 7.2)
       activejob (>= 7.2)
@@ -372,6 +374,7 @@ DEPENDENCIES
   rails-i18n
   rspec-rails
   rubocop-rails-omakase
+  simple_calendar
   solid_cable
   solid_cache
   solid_queue
