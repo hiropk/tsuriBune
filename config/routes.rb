@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :links
   resources :schedules
   resources :fishing_service_infos, only: [ :show, :edit, :update ]
   resources :menus
@@ -7,7 +8,6 @@ Rails.application.routes.draw do
   get "ship_captain/home"
   get "ship_captain/page_edit"
   get "ship_captain/fishing_service_info_edit"
-  get "ship_captain/link_edit"
   get "ship_captain/safety_info_edit"
 
   post "micropots/create"
