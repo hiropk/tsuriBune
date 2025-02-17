@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :business_regulations
   resource :session, only: [ :new, :create, :destroy ]
   resources :passwords, param: :token
   resources :menus
